@@ -14,27 +14,28 @@ let API_KEY = "098829b5ff75eb5a772d899969c444e5"
 
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
+
+    var movies: [NSDictionary]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
         Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/now_playing", parameters: ["api_key": API_KEY])
             .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
+
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                    self.movies = JSON["results"] as? [NSDictionary]
+                    self.tableView.reloadData()
                 }
         }
-        
     }
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
@@ -45,21 +46,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath)
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
