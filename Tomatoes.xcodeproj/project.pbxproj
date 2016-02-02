@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		826CADB61C614E5200B6541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADB51C614E5200B6541E /* AppDelegate.swift */; };
+		826CADB81C614E5200B6541E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADB71C614E5200B6541E /* ViewController.swift */; };
+		826CADBB1C614E5200B6541E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826CADB91C614E5200B6541E /* Main.storyboard */; };
+		826CADBD1C614E5200B6541E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826CADBC1C614E5200B6541E /* Assets.xcassets */; };
+		826CADC01C614E5200B6541E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826CADBE1C614E5200B6541E /* LaunchScreen.storyboard */; };
+		826CADCB1C614E5200B6541E /* TomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADCA1C614E5200B6541E /* TomatoesTests.swift */; };
+		826CADD61C614E5200B6541E /* TomatoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADD51C614E5200B6541E /* TomatoesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		826CADC71C614E5200B6541E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 826CADAA1C614E5200B6541E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 826CADB11C614E5200B6541E;
+			remoteInfo = Tomatoes;
+		};
+		826CADD21C614E5200B6541E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 826CADAA1C614E5200B6541E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 826CADB11C614E5200B6541E;
+			remoteInfo = Tomatoes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		826CADB21C614E5200B6541E /* Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		826CADB51C614E5200B6541E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		826CADB71C614E5200B6541E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		826CADBA1C614E5200B6541E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		826CADBC1C614E5200B6541E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		826CADBF1C614E5200B6541E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		826CADC11C614E5200B6541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826CADC61C614E5200B6541E /* TomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		826CADCA1C614E5200B6541E /* TomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoesTests.swift; sourceTree = "<group>"; };
+		826CADCC1C614E5200B6541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826CADD11C614E5200B6541E /* TomatoesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		826CADD51C614E5200B6541E /* TomatoesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoesUITests.swift; sourceTree = "<group>"; };
+		826CADD71C614E5200B6541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		826CADAF1C614E5200B6541E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826CADC31C614E5200B6541E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826CADCE1C614E5200B6541E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		826CADA91C614E5200B6541E = {
+			isa = PBXGroup;
+			children = (
+				826CADB41C614E5200B6541E /* Tomatoes */,
+				826CADC91C614E5200B6541E /* TomatoesTests */,
+				826CADD41C614E5200B6541E /* TomatoesUITests */,
+				826CADB31C614E5200B6541E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		826CADB31C614E5200B6541E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				826CADB21C614E5200B6541E /* Tomatoes.app */,
+				826CADC61C614E5200B6541E /* TomatoesTests.xctest */,
+				826CADD11C614E5200B6541E /* TomatoesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		826CADB41C614E5200B6541E /* Tomatoes */ = {
+			isa = PBXGroup;
+			children = (
+				826CADB51C614E5200B6541E /* AppDelegate.swift */,
+				826CADB71C614E5200B6541E /* ViewController.swift */,
+				826CADB91C614E5200B6541E /* Main.storyboard */,
+				826CADBC1C614E5200B6541E /* Assets.xcassets */,
+				826CADBE1C614E5200B6541E /* LaunchScreen.storyboard */,
+				826CADC11C614E5200B6541E /* Info.plist */,
+			);
+			path = Tomatoes;
+			sourceTree = "<group>";
+		};
+		826CADC91C614E5200B6541E /* TomatoesTests */ = {
+			isa = PBXGroup;
+			children = (
+				826CADCA1C614E5200B6541E /* TomatoesTests.swift */,
+				826CADCC1C614E5200B6541E /* Info.plist */,
+			);
+			path = TomatoesTests;
+			sourceTree = "<group>";
+		};
+		826CADD41C614E5200B6541E /* TomatoesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				826CADD51C614E5200B6541E /* TomatoesUITests.swift */,
+				826CADD71C614E5200B6541E /* Info.plist */,
+			);
+			path = TomatoesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		826CADB11C614E5200B6541E /* Tomatoes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 826CADDA1C614E5200B6541E /* Build configuration list for PBXNativeTarget "Tomatoes" */;
+			buildPhases = (
+				826CADAE1C614E5200B6541E /* Sources */,
+				826CADAF1C614E5200B6541E /* Frameworks */,
+				826CADB01C614E5200B6541E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tomatoes;
+			productName = Tomatoes;
+			productReference = 826CADB21C614E5200B6541E /* Tomatoes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		826CADC51C614E5200B6541E /* TomatoesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 826CADDD1C614E5200B6541E /* Build configuration list for PBXNativeTarget "TomatoesTests" */;
+			buildPhases = (
+				826CADC21C614E5200B6541E /* Sources */,
+				826CADC31C614E5200B6541E /* Frameworks */,
+				826CADC41C614E5200B6541E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				826CADC81C614E5200B6541E /* PBXTargetDependency */,
+			);
+			name = TomatoesTests;
+			productName = TomatoesTests;
+			productReference = 826CADC61C614E5200B6541E /* TomatoesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		826CADD01C614E5200B6541E /* TomatoesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 826CADE01C614E5200B6541E /* Build configuration list for PBXNativeTarget "TomatoesUITests" */;
+			buildPhases = (
+				826CADCD1C614E5200B6541E /* Sources */,
+				826CADCE1C614E5200B6541E /* Frameworks */,
+				826CADCF1C614E5200B6541E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				826CADD31C614E5200B6541E /* PBXTargetDependency */,
+			);
+			name = TomatoesUITests;
+			productName = TomatoesUITests;
+			productReference = 826CADD11C614E5200B6541E /* TomatoesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		826CADAA1C614E5200B6541E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = nottombrown;
+				TargetAttributes = {
+					826CADB11C614E5200B6541E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					826CADC51C614E5200B6541E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 826CADB11C614E5200B6541E;
+					};
+					826CADD01C614E5200B6541E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 826CADB11C614E5200B6541E;
+					};
+				};
+			};
+			buildConfigurationList = 826CADAD1C614E5200B6541E /* Build configuration list for PBXProject "Tomatoes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 826CADA91C614E5200B6541E;
+			productRefGroup = 826CADB31C614E5200B6541E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				826CADB11C614E5200B6541E /* Tomatoes */,
+				826CADC51C614E5200B6541E /* TomatoesTests */,
+				826CADD01C614E5200B6541E /* TomatoesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		826CADB01C614E5200B6541E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826CADC01C614E5200B6541E /* LaunchScreen.storyboard in Resources */,
+				826CADBD1C614E5200B6541E /* Assets.xcassets in Resources */,
+				826CADBB1C614E5200B6541E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826CADC41C614E5200B6541E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826CADCF1C614E5200B6541E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		826CADAE1C614E5200B6541E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826CADB81C614E5200B6541E /* ViewController.swift in Sources */,
+				826CADB61C614E5200B6541E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826CADC21C614E5200B6541E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826CADCB1C614E5200B6541E /* TomatoesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826CADCD1C614E5200B6541E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826CADD61C614E5200B6541E /* TomatoesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		826CADC81C614E5200B6541E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 826CADB11C614E5200B6541E /* Tomatoes */;
+			targetProxy = 826CADC71C614E5200B6541E /* PBXContainerItemProxy */;
+		};
+		826CADD31C614E5200B6541E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 826CADB11C614E5200B6541E /* Tomatoes */;
+			targetProxy = 826CADD21C614E5200B6541E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		826CADB91C614E5200B6541E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				826CADBA1C614E5200B6541E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		826CADBE1C614E5200B6541E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				826CADBF1C614E5200B6541E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		826CADD81C614E5200B6541E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		826CADD91C614E5200B6541E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		826CADDB1C614E5200B6541E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tomatoes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nottombrown.Tomatoes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		826CADDC1C614E5200B6541E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tomatoes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nottombrown.Tomatoes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		826CADDE1C614E5200B6541E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TomatoesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nottombrown.TomatoesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomatoes.app/Tomatoes";
+			};
+			name = Debug;
+		};
+		826CADDF1C614E5200B6541E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TomatoesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nottombrown.TomatoesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomatoes.app/Tomatoes";
+			};
+			name = Release;
+		};
+		826CADE11C614E5200B6541E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TomatoesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nottombrown.TomatoesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tomatoes;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		826CADE21C614E5200B6541E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TomatoesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nottombrown.TomatoesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tomatoes;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		826CADAD1C614E5200B6541E /* Build configuration list for PBXProject "Tomatoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826CADD81C614E5200B6541E /* Debug */,
+				826CADD91C614E5200B6541E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		826CADDA1C614E5200B6541E /* Build configuration list for PBXNativeTarget "Tomatoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826CADDB1C614E5200B6541E /* Debug */,
+				826CADDC1C614E5200B6541E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		826CADDD1C614E5200B6541E /* Build configuration list for PBXNativeTarget "TomatoesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826CADDE1C614E5200B6541E /* Debug */,
+				826CADDF1C614E5200B6541E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		826CADE01C614E5200B6541E /* Build configuration list for PBXNativeTarget "TomatoesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826CADE11C614E5200B6541E /* Debug */,
+				826CADE21C614E5200B6541E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 826CADAA1C614E5200B6541E /* Project object */;
+}
