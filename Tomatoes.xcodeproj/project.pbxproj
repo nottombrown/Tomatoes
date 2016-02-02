@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		826CADB61C614E5200B6541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADB51C614E5200B6541E /* AppDelegate.swift */; };
-		826CADB81C614E5200B6541E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADB71C614E5200B6541E /* ViewController.swift */; };
 		826CADBB1C614E5200B6541E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826CADB91C614E5200B6541E /* Main.storyboard */; };
 		826CADBD1C614E5200B6541E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826CADBC1C614E5200B6541E /* Assets.xcassets */; };
 		826CADC01C614E5200B6541E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826CADBE1C614E5200B6541E /* LaunchScreen.storyboard */; };
 		826CADCB1C614E5200B6541E /* TomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADCA1C614E5200B6541E /* TomatoesTests.swift */; };
 		826CADD61C614E5200B6541E /* TomatoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADD51C614E5200B6541E /* TomatoesUITests.swift */; };
+		826CADE41C614EEF00B6541E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADE31C614EEF00B6541E /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		826CADB21C614E5200B6541E /* Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		826CADB51C614E5200B6541E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		826CADB71C614E5200B6541E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		826CADBA1C614E5200B6541E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		826CADBC1C614E5200B6541E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		826CADBF1C614E5200B6541E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		826CADD11C614E5200B6541E /* TomatoesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		826CADD51C614E5200B6541E /* TomatoesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoesUITests.swift; sourceTree = "<group>"; };
 		826CADD71C614E5200B6541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826CADE31C614EEF00B6541E /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		826CADB41C614E5200B6541E /* Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				826CADE31C614EEF00B6541E /* MoviesViewController.swift */,
 				826CADB51C614E5200B6541E /* AppDelegate.swift */,
-				826CADB71C614E5200B6541E /* ViewController.swift */,
 				826CADB91C614E5200B6541E /* Main.storyboard */,
 				826CADBC1C614E5200B6541E /* Assets.xcassets */,
 				826CADBE1C614E5200B6541E /* LaunchScreen.storyboard */,
@@ -256,8 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				826CADB81C614E5200B6541E /* ViewController.swift in Sources */,
 				826CADB61C614E5200B6541E /* AppDelegate.swift in Sources */,
+				826CADE41C614EEF00B6541E /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
