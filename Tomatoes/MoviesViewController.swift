@@ -9,6 +9,10 @@
 import UIKit
 import Alamofire
 
+// Checking this into git because it can't do any damage
+let API_KEY = "098829b5ff75eb5a772d899969c444e5"
+
+
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -18,10 +22,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
-        
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/now_playing", parameters: ["api_key": API_KEY])
             .responseJSON { response in
                 print(response.request)  // original URL request
                 print(response.response) // URL response

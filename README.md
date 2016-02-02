@@ -45,6 +45,8 @@ Install with
 pod install
 ```
 
+After using cocoapods, make sure to open the `.xcworkspace` instead of the `.xcproject`
+
 ## License
 
     Copyright [yyyy] [name of copyright owner]
