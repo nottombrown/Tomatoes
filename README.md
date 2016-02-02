@@ -2,7 +2,7 @@
 
 **Tomatoes** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## User Stories
 
@@ -49,7 +49,7 @@ After using cocoapods, make sure to open the `.xcworkspace` instead of the `.xcp
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2016 - Tom Brown
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
