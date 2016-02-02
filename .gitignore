@@ -62,5 +62,8 @@ Carthage/Build
 fastlane/report.xml
 fastlane/screenshots
 
+# Ignore CocoaPods libraries
+Pods
+
 # Secrets
 .env
