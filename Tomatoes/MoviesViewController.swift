@@ -19,6 +19,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [NSDictionary]?
+    var endpoint: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +27,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         
-        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/now_playing", parameters: ["api_key": API_KEY])
-            .responseJSON { response in
-                if let JSON = response.result.value {
-                    self.movies = JSON["results"] as? [NSDictionary]
-                    self.tableView.reloadData()
-                }
+        if let endpoint = self.endpoint {
+            Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/\(endpoint)", parameters: ["api_key": API_KEY])
+                .responseJSON { response in
+                    if let JSON = response.result.value {
+                        self.movies = JSON["results"] as? [NSDictionary]
+                        self.tableView.reloadData()
+                    }
+            }
         }
     }
     
