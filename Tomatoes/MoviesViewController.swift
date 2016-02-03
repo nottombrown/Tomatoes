@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import EZLoadingActivity
 
 // Checking this into git because it can't do any damage
 let API_KEY = "098829b5ff75eb5a772d899969c444e5"
@@ -28,8 +29,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         
         if let endpoint = self.endpoint {
+            EZLoadingActivity.show("Loading...", disableUI: false)
             Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/\(endpoint)", parameters: ["api_key": API_KEY])
                 .responseJSON { response in
+                    EZLoadingActivity.hide()
                     if let JSON = response.result.value {
                         self.movies = JSON["results"] as? [NSDictionary]
                         self.tableView.reloadData()
