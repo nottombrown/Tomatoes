@@ -2,16 +2,19 @@ PODS:
   - Alamofire (3.1.5)
   - AlamofireImage (2.3.0):
     - Alamofire (~> 3.1)
+  - DGElasticPullToRefresh (1.0.3)
   - EZLoadingActivity (0.8)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - AlamofireImage (~> 2.0)
+  - DGElasticPullToRefresh
   - EZLoadingActivity
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   AlamofireImage: 4013fb5b99b10117bf2554a67b9bd2231d476b45
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
 
 COCOAPODS: 0.39.0
