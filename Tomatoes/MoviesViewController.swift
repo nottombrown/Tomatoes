@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 // Checking this into git because it can't do any damage
 let API_KEY = "098829b5ff75eb5a772d899969c444e5"
@@ -48,10 +49,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
         
+        let baseUrl = "https://image.tmdb.org/t/p/w500"
+        let posterPath = movie["poster_path"] as! String
+        
+        let imageUrl = NSURL(string: "\(baseUrl)\(posterPath)")
+        cell.posterView.af_setImageWithURL(imageUrl!)
+        
         cell.titleLabel!.text = title
         cell.overviewLabel!.text = overview
         return cell
-        
     }
     
     
