@@ -16,6 +16,24 @@ import BFRadialWaveHUD
 let API_KEY = "098829b5ff75eb5a772d899969c444e5"
 
 
+enum Memoized<T> {
+    case Evaluated(T)
+    case Unevaluated(() -> T)
+    
+    var value: T {
+        mutating get {
+            switch self {
+            case .Evaluated(let x):
+                return x
+            case .Unevaluated(let f):
+                self = .Evaluated(f())
+                return value
+            }
+        }
+    }
+}
+
+
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
@@ -44,6 +62,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func fetchMovies() {
         if let endpoint = self.endpoint {
+            let hud = createHUD()
             hud.show()
             Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/\(endpoint)", parameters: ["api_key": API_KEY])
                 .responseJSON { response in
@@ -51,34 +70,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                         self.movies = JSON["results"] as? [NSDictionary]
                         self.tableView.reloadData()
                         
-                        self.hud.showErrorWithMessage("Failed to load movies")
+                        hud.showErrorWithMessage("Failed to load movies")
                     }
             }
         }
     }
     
-    
-    var hud: BFRadialWaveHUD {
+    // What's the swifty way of doing this? Maybe save it as a variable in an initializer?
+    // Maybe turn it into a memoized computed property?
+    func createHUD() -> BFRadialWaveHUD {
         // https://github.com/bfeher/BFRadialWaveHUD
+        let hud = BFRadialWaveHUD(view: self.view,
+            fullScreen: false,
+            circles:BFRadialWaveHUD_DefaultNumberOfCircles,
+            circleColor:nil,
+            mode:.Default,
+            strokeWidth:BFRadialWaveHUD_DefaultCircleStrokeWidth
+        )
+        hud.tapToDismiss = true
 
-        if let memoizedHud = _hud {
-            return memoizedHud
-        } else {
-            let hud = BFRadialWaveHUD(view: self.view,
-                fullScreen: false,
-                circles:BFRadialWaveHUD_DefaultNumberOfCircles,
-                circleColor:nil,
-                mode:.Default,
-                strokeWidth:BFRadialWaveHUD_DefaultCircleStrokeWidth
-            )
-            hud.tapToDismiss = true
-
-            // memoize our hud and return it
-            _hud = hud
-            return hud
-        }
+        return hud
     }
-    var _hud: BFRadialWaveHUD?
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
