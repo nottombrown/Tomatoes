@@ -6,3 +6,4 @@ pod 'Alamofire', '~> 3.0'
 pod 'AlamofireImage', '~> 2.0'
 pod 'EZLoadingActivity'
 pod "DGElasticPullToRefresh"
+pod 'BFRadialWaveHUD', '~> 1.5.4'

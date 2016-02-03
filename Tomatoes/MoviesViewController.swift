@@ -9,8 +9,8 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-import EZLoadingActivity
 import DGElasticPullToRefresh
+import BFRadialWaveHUD
 
 // Checking this into git because it can't do any damage
 let API_KEY = "098829b5ff75eb5a772d899969c444e5"
@@ -22,6 +22,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     var movies: [NSDictionary]?
     var endpoint: String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         fetchMovies()
         
+        // Fancy pull to refresh
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
         loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
@@ -42,17 +44,41 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func fetchMovies() {
         if let endpoint = self.endpoint {
-            EZLoadingActivity.show("Loading...", disableUI: false)
+            hud.show()
             Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/\(endpoint)", parameters: ["api_key": API_KEY])
                 .responseJSON { response in
-                    EZLoadingActivity.hide()
                     if let JSON = response.result.value {
                         self.movies = JSON["results"] as? [NSDictionary]
                         self.tableView.reloadData()
+                        
+                        self.hud.showErrorWithMessage("Failed to load movies")
                     }
             }
         }
     }
+    
+    
+    var hud: BFRadialWaveHUD {
+        // https://github.com/bfeher/BFRadialWaveHUD
+
+        if let memoizedHud = _hud {
+            return memoizedHud
+        } else {
+            let hud = BFRadialWaveHUD(view: self.view,
+                fullScreen: false,
+                circles:BFRadialWaveHUD_DefaultNumberOfCircles,
+                circleColor:nil,
+                mode:.Default,
+                strokeWidth:BFRadialWaveHUD_DefaultCircleStrokeWidth
+            )
+            hud.tapToDismiss = true
+
+            // memoize our hud and return it
+            _hud = hud
+            return hud
+        }
+    }
+    var _hud: BFRadialWaveHUD?
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
