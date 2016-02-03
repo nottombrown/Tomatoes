@@ -16,7 +16,7 @@ let API_KEY = "098829b5ff75eb5a772d899969c444e5"
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     var movies: [NSDictionary]?
     
     override func viewDidLoad() {
@@ -27,7 +27,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/now_playing", parameters: ["api_key": API_KEY])
             .responseJSON { response in
-
                 if let JSON = response.result.value {
                     self.movies = JSON["results"] as? [NSDictionary]
                     self.tableView.reloadData()
@@ -43,12 +42,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
+        
         let movie = movies![indexPath.row]
         let title = movie["title"] as! String
+        let overview = movie["overview"] as! String
         
-        cell.textLabel!.text = title
+        cell.titleLabel!.text = title
+        cell.overviewLabel!.text = overview
         return cell
         
     }

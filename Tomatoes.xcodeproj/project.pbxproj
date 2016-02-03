@@ -15,6 +15,7 @@
 		826CADCB1C614E5200B6541E /* TomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADCA1C614E5200B6541E /* TomatoesTests.swift */; };
 		826CADD61C614E5200B6541E /* TomatoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADD51C614E5200B6541E /* TomatoesUITests.swift */; };
 		826CADE41C614EEF00B6541E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADE31C614EEF00B6541E /* MoviesViewController.swift */; };
+		82D18D0C1C61B8190006F8E4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D18D0B1C61B8190006F8E4 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		826CADD51C614E5200B6541E /* TomatoesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoesUITests.swift; sourceTree = "<group>"; };
 		826CADD71C614E5200B6541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826CADE31C614EEF00B6541E /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		82D18D0B1C61B8190006F8E4 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		C208C2D14261D7223EAECEBD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,7 +106,8 @@
 		826CADB41C614E5200B6541E /* Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
-				826CADE31C614EEF00B6541E /* MoviesViewController.swift */,
+				82D18D0D1C61B8290006F8E4 /* ViewControllers */,
+				82D18D0A1C61B7DE0006F8E4 /* Views */,
 				826CADB51C614E5200B6541E /* AppDelegate.swift */,
 				826CADB91C614E5200B6541E /* Main.storyboard */,
 				826CADBC1C614E5200B6541E /* Assets.xcassets */,
@@ -130,6 +133,22 @@
 				826CADD71C614E5200B6541E /* Info.plist */,
 			);
 			path = TomatoesUITests;
+			sourceTree = "<group>";
+		};
+		82D18D0A1C61B7DE0006F8E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82D18D0B1C61B8190006F8E4 /* MovieCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		82D18D0D1C61B8290006F8E4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				826CADE31C614EEF00B6541E /* MoviesViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F0559BDBF4A805A98F5BF231 /* Frameworks */ = {
@@ -333,6 +352,7 @@
 			files = (
 				826CADB61C614E5200B6541E /* AppDelegate.swift in Sources */,
 				826CADE41C614EEF00B6541E /* MoviesViewController.swift in Sources */,
+				82D18D0C1C61B8190006F8E4 /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
