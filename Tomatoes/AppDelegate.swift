@@ -26,26 +26,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nowPlayingNavigationController = storyboard.instantiateViewControllerWithIdentifier("MoviesNavigationController") as! UINavigationController
         let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
         nowPlayingViewController.endpoint = "now_playing"
-        nowPlayingNavigationController.tabBarItem.title = "Now Playing"
         nowPlayingNavigationController.tabBarItem.image = UIImage(named: "in_theaters_icon")
+        configureNavController(nowPlayingNavigationController, title: "Now Playing")
+        
         
         let topRatedNavigationController = storyboard.instantiateViewControllerWithIdentifier("MoviesNavigationController") as! UINavigationController
         let topRatedViewController = topRatedNavigationController.topViewController as! MoviesViewController
         topRatedViewController.endpoint = "top_rated"
-        topRatedNavigationController.tabBarItem.title = "Top Rated"
         topRatedNavigationController.tabBarItem.image = UIImage(named: "top_rated_icon")
+        configureNavController(topRatedNavigationController, title: "Top Rated")
         
         // Create TabBar Controller
         let tabBarController = UITabBarController()
-        
+
         tabBarController.viewControllers = [
             nowPlayingNavigationController,
             topRatedNavigationController
         ]
+        let tabBar = tabBarController.tabBar
+        tabBar.tintColor = highlightColor
+        tabBar.barTintColor = darkColor
+        tabBar.translucent = false
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         return true
+    }
+    
+    func configureNavController(navController: UINavigationController, title: String) {
+        
+        navController.topViewController!.title = title
+        navController.tabBarItem.title = title
+        
+        let navigationBar = navController.navigationBar
+        navigationBar.barTintColor = darkColor
+        navigationBar.tintColor = highlightColor
+        navigationBar.translucent = false
+        navigationBar.shadowImage = UIImage()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UINavigationBar.appearance().shadowImage = UIImage()
     }
 
     func applicationWillResignActive(application: UIApplication) {

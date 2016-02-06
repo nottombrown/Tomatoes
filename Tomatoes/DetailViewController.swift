@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         titleLabel.text = movie["title"] as? String
+        title = movie["title"] as? String
         overviewLabel.text = movie["overview"] as? String
         overviewLabel.sizeToFit()
         

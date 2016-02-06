@@ -17,6 +17,7 @@
 		826CADD61C614E5200B6541E /* TomatoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADD51C614E5200B6541E /* TomatoesUITests.swift */; };
 		826CADE41C614EEF00B6541E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CADE31C614EEF00B6541E /* MoviesViewController.swift */; };
 		82D18D0C1C61B8190006F8E4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D18D0B1C61B8190006F8E4 /* MovieCell.swift */; };
+		82E375911C669918009F309B /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E375901C669918009F309B /* colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		826CADD71C614E5200B6541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826CADE31C614EEF00B6541E /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		82D18D0B1C61B8190006F8E4 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		82E375901C669918009F309B /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		C208C2D14261D7223EAECEBD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				826CADBC1C614E5200B6541E /* Assets.xcassets */,
 				826CADBE1C614E5200B6541E /* LaunchScreen.storyboard */,
 				826CADC11C614E5200B6541E /* Info.plist */,
+				82E375901C669918009F309B /* colors.swift */,
 			);
 			path = Tomatoes;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				826CADB61C614E5200B6541E /* AppDelegate.swift in Sources */,
+				82E375911C669918009F309B /* colors.swift in Sources */,
 				826CADE41C614EEF00B6541E /* MoviesViewController.swift in Sources */,
 				82D18D0C1C61B8190006F8E4 /* MovieCell.swift in Sources */,
 				8259ACC91C61C2B700C4B37C /* DetailViewController.swift in Sources */,

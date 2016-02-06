@@ -40,23 +40,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     var movies: [NSDictionary]?
     var endpoint: String?
+    var titleString: String?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.dataSource = self
         tableView.delegate = self
         fetchMovies()
         
         // Fancy pull to refresh
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+        loadingView.tintColor = highlightColor
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
                 self?.fetchMovies()
                 self?.tableView.dg_stopLoading()
             }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        tableView.dg_setPullToRefreshFillColor(darkColor)
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
     }
     
@@ -70,7 +70,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                         self.movies = JSON["results"] as? [NSDictionary]
                         self.tableView.reloadData()
                         
-                        hud.showErrorWithMessage("Failed to load movies")
+                        hud.showErrorWithMessage("Network Error")
                     }
             }
         }

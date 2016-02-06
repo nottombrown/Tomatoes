@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Movies View Controller-->
+        <!--Now Playing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" customModule="Tomatoes" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="o1s-3x-t00"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="o1s-3x-t00"/>
                     <connections>
                         <outlet property="tableView" destination="BJi-Db-Rkm" id="zdf-Ev-14Z"/>
                     </connections>
@@ -141,4 +141,5 @@
             <point key="canvasLocation" x="162" y="366"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
