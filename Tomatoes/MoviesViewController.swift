@@ -16,24 +16,6 @@ import BFRadialWaveHUD
 let API_KEY = "098829b5ff75eb5a772d899969c444e5"
 
 
-enum Memoized<T> {
-    case Evaluated(T)
-    case Unevaluated(() -> T)
-    
-    var value: T {
-        mutating get {
-            switch self {
-            case .Evaluated(let x):
-                return x
-            case .Unevaluated(let f):
-                self = .Evaluated(f())
-                return value
-            }
-        }
-    }
-}
-
-
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
