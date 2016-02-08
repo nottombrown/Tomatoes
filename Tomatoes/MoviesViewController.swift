@@ -48,10 +48,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             hud.show()
             Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/\(endpoint)", parameters: ["api_key": API_KEY])
                 .responseJSON { response in
-                    if let JSON = response.result.value {
-                        self.movies = JSON["results"] as? [NSDictionary]
-                        self.tableView.reloadData()
-                        
+                    switch response.result {
+                    case .Success:
+                        if let JSON = response.result.value {
+                            self.movies = JSON["results"] as? [NSDictionary]
+                            self.tableView.reloadData()
+                            hud.hidden = true
+
+                        }
+                    case .Failure(_):
                         hud.showErrorWithMessage("Network Error")
                     }
             }
